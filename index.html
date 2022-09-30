@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This app helps twitch streamers pick the background">
+    	<meta name="keywords" content="twitch, background">
+
+		<title>VTuber Cottagecore Background</title>
+
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="slide">
+			<div id="toggle">&#9776;</div>
+			<nav class="box">
+				<ul>
+					<li id="cc">Cottagecore</li>
+					<li id="ov1">Overlay1</li>
+					<li id="ov2">Overlay2</li>
+					<li id="ss">Start</li>
+					<li id="sp">Pause</li>
+					<li id="se">End</li>
+				</ul>
+			</nav>
+		</div>
+
+		<img src="img/ccOverlay1.png" alt="Overlay" id="overlay1" class="hidden">
+
+		<img src="img/ccOverlay2.png" alt="Overlay" id="overlay2" class="hidden">
+
+		<video controls loop id="ssVideo" class="hidden formatVideo">
+			<source src="img/ccIntro.mp4" type="video/mp4">
+		</video>
+
+		<video controls loop id="spVideo" class="hidden formatVideo">
+			<source src="img/ccMid.mp4" type="video/mp4">
+		</video>
+
+		<video controls loop id="seVideo" class="hidden formatVideo">
+			<source src="img/ccEnd.mp4" type="video/mp4">
+		</video>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
