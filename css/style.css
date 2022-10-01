@@ -1,0 +1,156 @@
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Dekko', Arial, Helvetica, sans-serif;
+  background: url(../img/ccMain.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* slide to toggle nav bar */
+
+#slide{
+  position: fixed;
+  /* background-color: pink; */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  width: 200px; 
+  left: -200px;
+  height: 255px;
+  transition: left 0.4s ease-in-out;
+  -o-transition: left 0.4s ease-in-out;
+  -ms-transition: left 0.4s ease-in-out;
+  -moz-transition: left 0.4s ease-in-out;
+  -webkit-transition: left 0.4s ease-in-out;
+}
+#toggle{
+  position: absolute;
+  left: 200px;
+  padding: 20px;
+  /* border-radius: 50px; */
+  /* background: gray;  */
+  color: rgb(255, 255, 255);
+}
+.box {
+  padding: 20px;
+}
+#slide:hover{
+  left: 0px;
+}
+#slide:hover ul{
+  position: static;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  left: 0px;
+}
+#slide:hover li{
+  position: static;
+  width: 150px;
+  height: 30px;
+  padding-bottom: 35px;
+  left: 0px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+img{
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+ul{
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  left: -200px;
+}
+
+li{
+  position: fixed;
+  width: 150px;
+  height: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  padding-bottom: 35px;
+  color: rgb(252, 198, 195);
+  left: -200px;
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+.formatVideo {
+  position: fixed; 
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* min-width: 100%;
+  min-height: 100%; */
+  object-fit: cover;
+}
+
+.video-container{
+  width: 50vw;
+  height: 50vh;
+}
+    
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    /* height = 100 * (9 / 16) = 56.25 */
+    height: 56.25vw;
+  }
+}
+    
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    /* width = 100 / (9 / 16) = 177.777777 */
+    width: 177.78vh;
+  }
+}
+
+.hidden {
+  display: none;
+}
